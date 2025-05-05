@@ -1,0 +1,402 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", serif;
+}
+
+/* Body Section */
+body {
+  background: #ffffff;
+  color: #333333; /* Dark gray text for readability */
+}
+
+/* Header Section */
+.head {
+  background: gold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.content {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.logo img {
+  width: 100px;
+  height: auto;
+}
+
+/* Navigation Menu */
+.menu ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: darkblue;
+  font-weight: 600;
+  font-size: 16px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Underline animation */
+.menu ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: darkblue;
+  transition: width 0.3s ease;
+}
+
+.menu ul li a:hover {
+  color: white;
+}
+
+.menu ul li a:hover::after {
+  width: 100%;
+}
+
+/* Search Bar */
+.search {
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  outline: none;
+  margin-left: 15px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.search:focus {
+  border-color: #4dba8b;
+  box-shadow: 0 0 5px rgba(77, 186, 139, 0.4);
+}
+.menu a[href="login.html"] {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.menu a[href="login.html"] img {
+  width: 30px;
+  height: auto;
+  transition: transform 0.2s ease;
+}
+
+.menu a[href="login.html"] img:hover {
+  transform: scale(1.05);
+}
+.breadcrumbs {
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.breadcrumbs a {
+  color: #0652a8;
+  text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #0a0a3a;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer .footer-content ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+footer .footer-content ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+footer .footer-content ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Social Media Links */
+.social-media-links {
+  margin-top: 20px;
+  height: 20;
+}
+
+.social-media-links a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.social-media-links a:hover {
+  color: #0652a8;
+}
+
+/* Loading Spinner */
+.loading-spinner {
+  display: none;
+  text-align: center;
+}
+
+.loading-spinner img {
+  width: 50px;
+}
+
+/* Live Score Section */
+.live-score-section {
+  background-color: #0a0a3a; /* Fresh Green background */
+  padding: 30px 20px;
+  border-radius: 20px;
+  margin: 20px;
+  text-align: center;
+}
+
+/* Section Title */
+.live-score-section h1 {
+  color: #ffffff; /* White text on green background */
+  font-size: 30px;
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+
+/* Wrap cards in a flex container */
+.live-score-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-items: center;
+}
+
+/* Individual Score Card */
+.score-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 15px;
+  width: 400px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.score-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Score Header */
+.score-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #333333; /* Dark gray */
+}
+
+.score-header a {
+  background-color: #034694; /* Deep Blue */
+  color: #ffffff;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* Score Body */
+.score-body table {
+  width: 100%;
+  margin-bottom: 10px;
+  word-wrap: break-word;
+  table-layout: fixed;
+}
+
+.score-body td {
+  padding: 5px 0;
+  vertical-align: middle;
+}
+
+.score-body img {
+  margin-right: 7px;
+  vertical-align: auto;
+  width: 30px;
+  height: auto;
+}
+
+.score-body span {
+  font-weight: 500;
+  font-size: 14px;
+  color: #333333; /* Dark gray text */
+}
+
+.score-body b {
+  font-size: 15px;
+  color: gold; /* Yellow-Gold for important scores */
+}
+
+.score-body p {
+  margin: 0;
+  font-size: 13px;
+  color: #333333;
+  overflow-wrap: break-word;
+}
+
+/* Score Footer */
+.score-footer {
+  display: flex;
+  gap: 15px;
+  font-size: 12px;
+  color: #333333;
+  flex-wrap: wrap;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown ul {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 250px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  padding: 12px;
+  color: black;
+  margin: 0;
+}
+
+.dropdown ul h4 {
+  margin: 10px 0 5px;
+}
+
+.dropdown ul a {
+  color: black;
+  padding: 6px 12px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown ul a:hover {
+  background-color: gold;
+}
+
+.dropdown:hover ul {
+  display: block;
+}
+/* Search Bar Container */
+.search-bar {
+  position: relative;
+  width: 250px;
+}
+
+.search {
+  width: 100%;
+  padding: 10px 40px 10px 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  outline: none;
+}
+
+.search-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 25px;
+  height: 20px;
+  pointer-events: none;
+}
+@media (max-width: 768px) {
+  .head .content {
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    position: relative;
+    width: 100%;
+  }
+
+  /* Logo on the left for mobile view */
+  .logo {
+    order: -1; /* Moves the logo to the top */
+    margin-left: 20px; /* Adds some space from the left edge */
+  }
+
+  .menu ul {
+    flex-direction: row; /* Horizontal menu */
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+  }
+
+  .menu ul li {
+    margin: 5px 10px;
+  }
+
+  .search-bar {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .menu a[href="login.html"] {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    display: block;
+  }
+
+  .live-score-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .score-card {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  .footer-content ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .footer-content {
+    text-align: center;
+  }
+}
+.facebook-img,
+.instagram,
+.twitter-img {
+  width: 32px;
+  height: 32px;
+}

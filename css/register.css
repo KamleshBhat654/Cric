@@ -1,0 +1,132 @@
+/* General Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: darkblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  margin: 0;
+}
+
+/* Register Box Styling */
+.register-box {
+  background-color: #fff;
+  padding: 40px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 450px;
+  text-align: center;
+  transform: translateY(-50px);
+  transition: transform 0.3s ease-in-out;
+}
+
+.register-box:hover {
+  transform: translateY(0);
+}
+
+.logo {
+  width: 80px;
+  margin: 0 auto 30px auto;
+  display: block;
+}
+
+h1 {
+  margin-bottom: 25px;
+  font-size: 32px;
+  color: #333;
+  font-weight: 600;
+}
+
+form input {
+  width: 100%;
+  padding: 14px;
+  margin: 12px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  transition: border 0.3s ease-in-out;
+}
+
+form input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 15px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:active {
+  background-color: #003366;
+}
+
+.social-btn {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-img {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.social-img:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .register-box {
+    padding: 30px 20px;
+    width: 100%;
+    max-width: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .logo {
+    width: 100px;
+  }
+
+  h1 {
+    font-size: 26px;
+    margin-bottom: 15px;
+  }
+
+  form input,
+  button {
+    font-size: 18px;
+    padding: 14px;
+  }
+
+  .social-btn {
+    gap: 10px;
+  }
+}

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ODI Player Rankings - Tri-Cric</title>
+    <link rel="stylesheet" href="../css/ranked.css" />
+    <style>
+      .ranking-section {
+        padding: 40px 20px;
+        max-width: 1000px;
+        margin: auto;
+        text-align: center;
+      }
+
+      .ranking-categories {
+        margin-bottom: 20px;
+        color: #757575;
+      }
+
+      .ranking-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+
+      .ranking-table th,
+      .ranking-table td {
+        border: 1px solid #ddd;
+        padding: 12px;
+        font-size: 16px;
+      }
+
+      .ranking-table th {
+        background-color: #f4f4f4;
+        color: #333;
+      }
+
+      /* Back button styles */
+      .back-button {
+        display: inline-block;
+        text-decoration: none;
+        color: #fff;
+        background-color: #007bff;
+        font-weight: 600;
+        font-size: 16px;
+        padding: 10px 20px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+      }
+
+      .back-button:hover {
+        background-color: #0056b3;
+        transform: scale(1.05);
+      }
+
+      /* Hide all sections initially */
+      .ranking-table-container {
+        display: none;
+      }
+
+      /* Show the active section */
+      .active {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <div class="head">
+      <div class="content">
+        <div class="logo">
+          <a href="index.html"
+            ><img src="../images/Tri-Cric.png" alt="Tri-Cric Logo"
+          /></a>
+        </div>
+        <div class="menu">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Live Score</a></li>
+            <li><a href="schedule.html">Schedule</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li class="dropdown">
+              <a href="#">Teams</a>
+              <ul>
+                <li><a href="mens.html">MENS</a></li>
+                <li><a href="womens.html">WOMENS</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#">Points Table</a>
+              <ul>
+                <li><a href="../pointstable/ipl.html">IPL</a></li>
+                <li><a href="../pointstable/t20.html">T20</a></li>
+                <li><a href="../pointstable/odi.html">ODI</a></li>
+                <li><a href="../pointstable/test.html">TEST</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- ODI Rankings Section -->
+    <section class="ranking-section">
+      <h1>ODI Player Rankings</h1>
+
+      <!-- Back Button -->
+      <a href="javascript:history.back()" class="back-button">Back</a>
+
+      <!-- Ranking Categories Links -->
+      <div class="ranking-categories">
+        <a href="javascript:void(0)" onclick="showCategory('batsman')"
+          >Batsman</a
+        >
+        <a href="javascript:void(0)" onclick="showCategory('bowler')">Bowler</a>
+        <a href="javascript:void(0)" onclick="showCategory('allrounder')"
+          >Allrounder</a
+        >
+      </div>
+
+      <!-- Batsman Table -->
+      <div class="ranking-table-container" id="batsman">
+        <h2>Batsman Rankings</h2>
+        <table class="ranking-table">
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Player</th>
+              <th>Country</th>
+              <th>Rating</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Babar Azam</td>
+              <td>Pakistan</td>
+              <td>857</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Shubman Gill</td>
+              <td>India</td>
+              <td>830</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Rassie van der Dussen</td>
+              <td>South Africa</td>
+              <td>791</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>David Warner</td>
+              <td>Australia</td>
+              <td>773</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Virat Kohli</td>
+              <td>India</td>
+              <td>765</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Bowler Table -->
+      <div class="ranking-table-container" id="bowler">
+        <h2>Bowler Rankings</h2>
+        <table class="ranking-table">
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Player</th>
+              <th>Country</th>
+              <th>Rating</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Mohammed Siraj</td>
+              <td>India</td>
+              <td>725</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Josh Hazlewood</td>
+              <td>Australia</td>
+              <td>709</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Trent Boult</td>
+              <td>New Zealand</td>
+              <td>696</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Mujeeb Ur Rahman</td>
+              <td>Afghanistan</td>
+              <td>685</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Shaheen Afridi</td>
+              <td>Pakistan</td>
+              <td>671</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Allrounder Table -->
+      <div class="ranking-table-container" id="allrounder">
+        <h2>Allrounder Rankings</h2>
+        <table class="ranking-table">
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Player</th>
+              <th>Country</th>
+              <th>Rating</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Shakib Al Hasan</td>
+              <td>Bangladesh</td>
+              <td>389</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Mohammad Nabi</td>
+              <td>Afghanistan</td>
+              <td>332</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Hardik Pandya</td>
+              <td>India</td>
+              <td>321</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Ben Stokes</td>
+              <td>England</td>
+              <td>312</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Sikandar Raza</td>
+              <td>Zimbabwe</td>
+              <td>305</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <p>&copy; 2025 Tri-Cric. All rights reserved.</p>
+        <div class="social-media-links">
+          <a href="https://www.facebook.com" class="facebook-btn">
+            <img
+              src="../images/facebook (3).png"
+              alt="Facebook"
+              class="facebook-img"
+            />
+          </a>
+          <a href="https://www.instagram.com" class="facebook-btn">
+            <img
+              src="../images/instagram.png"
+              alt="instagram"
+              class="instagram"
+            />
+          </a>
+          <a href="https://www.twitter.com" class="facebook-btn">
+            <img
+              src="../images/twitter.png"
+              alt="Twitter"
+              class="twitter-img"
+            />
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function showCategory(category) {
+        // Hide all categories
+        const categories = document.querySelectorAll(
+          ".ranking-table-container"
+        );
+        categories.forEach(function (category) {
+          category.classList.remove("active");
+        });
+
+        // Show the clicked category
+        const activeCategory = document.getElementById(category);
+        activeCategory.classList.add("active");
+      }
+
+      // Show batsman by default
+      showCategory("batsman");
+    </script>
+  </body>
+</html>

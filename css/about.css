@@ -1,0 +1,391 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: white;
+}
+
+/* Header Section */
+.head {
+  background: gold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.content {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  position: relative;
+}
+
+.left-nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.logo img {
+  width: 100px;
+  height: auto;
+}
+
+/* Navigation Menu */
+.menu ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.menu ul li a {
+  text-decoration: none;
+  color: darkblue;
+  font-weight: 600;
+  font-size: 16px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Underline animation */
+.menu ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: darkblue;
+  transition: width 0.3s ease;
+}
+
+.menu ul li a:hover {
+  color: white;
+}
+
+.menu ul li a:hover::after {
+  width: 100%;
+}
+
+/* Login Icon */
+.content > a[href="login.html"] {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.content > a[href="login.html"] img {
+  width: 30px;
+  height: auto;
+  transition: transform 0.2s ease;
+}
+
+.content > a[href="login.html"] img:hover {
+  transform: scale(1.05);
+}
+
+/* General Section Styling for About Us, Our Mission, Why Us */
+.about-us-section,
+.our-mission-section,
+.why-us-section {
+  padding: 50px 20px;
+  background-color: #757575; /* Grey background */
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+  max-width: 1000px;
+  margin: 30px auto;
+  text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  color: white; /* White text */
+}
+
+/* General Section Styling for About Us, Our Mission, Why Us */
+.about-us-section,
+.our-mission-section,
+.why-us-section {
+  padding: 50px 20px;
+  background-color: #0a0a3a; /* Grey background */
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+  max-width: 1000px;
+  margin: 30px auto;
+  text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  color: white; /* White text */
+}
+
+/* About Us Section */
+.about-us-section h1 {
+  font-size: 36px;
+  color: white; /* White text */
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.about-us-section p {
+  font-size: 18px;
+  color: white; /* White text */
+  margin-bottom: 30px;
+  line-height: 1.8;
+}
+
+/* Our Mission Section */
+.our-mission-section h2 {
+  font-size: 30px;
+  color: white; /* White text */
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.our-mission-section p {
+  font-size: 17px;
+  color: white; /* White text */
+  margin-bottom: 20px;
+  line-height: 1.8;
+}
+
+/* Why Us Section */
+.why-us-section h2 {
+  font-size: 30px;
+  color: white; /* White text */
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.why-us-section p {
+  font-size: 17px;
+  color: white; /* White text */
+  margin-bottom: 20px;
+  line-height: 1.8;
+}
+
+.why-us-section ul {
+  list-style: none;
+  padding: 0;
+  font-size: 17px;
+  color: white; /* White text */
+}
+
+.why-us-section li {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.why-us-section li::before {
+  content: "\2022";
+  color: white; /* White bullet points */
+  margin-right: 10px;
+  font-size: 22px;
+}
+
+/* Hover Effects */
+.about-us-section:hover,
+.our-mission-section:hover,
+.why-us-section:hover {
+  background-color: gold; /* Light hover background */
+  color: white; /* Grey text after hover */
+}
+
+.about-us-section:hover h1,
+.our-mission-section:hover h2,
+.why-us-section:hover h2 {
+  color: white; /* Grey color for titles after hover */
+}
+
+.about-us-section:hover p,
+.our-mission-section:hover p,
+.why-us-section:hover p {
+  color: white; /* Grey color for paragraphs after hover */
+}
+
+.why-us-section li:hover {
+  color: white; /* Grey color for list items after hover */
+}
+
+/* Footer */
+footer {
+  background-color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 14px;
+  color: #888;
+  border-top: 1px solid #eee;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .contact-form-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .contact-form,
+  .contact-details {
+    width: 100%;
+  }
+}
+
+/* Team Section Dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropdown ul {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 250px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  padding: 12px;
+  color: black;
+  margin: 0;
+}
+
+.dropdown ul h4 {
+  margin: 10px 0 5px;
+}
+
+.dropdown ul a {
+  color: black;
+  padding: 6px 12px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown ul a:hover {
+  background-color: gold;
+}
+
+.dropdown:hover ul {
+  display: block;
+}
+/* Footer Styles */
+footer {
+  background-color: #0a0a3a;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer .footer-content ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+footer .footer-content ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+footer .footer-content ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Social Media Links */
+.social-media-links {
+  margin-top: 20px;
+}
+
+.social-media-links a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.social-media-links a:hover {
+  color: #0652a8;
+}
+
+/* Loading Spinner */
+.loading-spinner {
+  display: none;
+  text-align: center;
+}
+
+.loading-spinner img {
+  width: 50px;
+}
+@media (max-width: 768px) {
+  .content {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .menu ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .menu ul li {
+    margin: 5px 10px;
+  }
+
+  .search-bar {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .menu a[href="login.html"] {
+    position: static;
+    margin-left: auto;
+    display: inline-block;
+  }
+
+  .footer-content ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-content {
+    text-align: center;
+  }
+
+  .live-score-wrapper,
+  .contact-form-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .score-card,
+  .contact-form,
+  .contact-details {
+    width: 90%;
+  }
+}
+.facebook-img,
+.instagram,
+.twitter-img {
+  width: 32px;
+  height: 32px;
+}

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Tri-Cric</title>
+  </head>
+  <body>
+    <div class="head">
+      <div class="content">
+        <div class="logo">
+          <img src="../images/Tri-Cric.png" alt="Tri-Cric Logo" />
+        </div>
+        <div class="menu">
+          <ul>
+            <li><a href="">Live Score</a></li>
+            <li><a href="schedule.html">Schedule</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+
+            <!-- Teams Dropdown -->
+            <li class="dropdown">
+              <a href="#">Teams</a>
+              <ul>
+                <li><a href="mens.html">MENS</a></li>
+                <li><a href="womens.html">WOMENS</a></li>
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#">Ranking</a>
+              <ul>
+                <li><a href="t20.html">T20</a></li>
+                <li><a href="odi.html">ODI</a></li>
+                <li><a href="test.html">TEST</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#">Points Table</a>
+              <ul>
+                <li><a href="../pointstable/ipl.html">IPL</a></li>
+                <li><a href="../pointstable/t20.html">T20</a></li>
+                <li><a href="../pointstable/odi.html">ODI</a></li>
+                <li><a href="../pointstable/test.html">TEST</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="search-bar">
+                <input
+                  type="text"
+                  placeholder="Search"
+                  class="search"
+                  id="teamSearch"
+                  onkeyup="filterTeams()"
+                />
+                <img
+                  src="../images/search.svg"
+                  alt="search"
+                  class="search-icon"
+                />
+              </div>
+            </li>
+          </ul>
+          <a href="login.html"><img src="../images/login.png" alt="logo" /></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Live Score Section -->
+    <section class="live-score-section">
+      <h1>Live Scores</h1>
+      <div class="loading-spinner" id="loadingSpinner">
+        <img src="../images/loader.gif" alt="Loading..." />
+      </div>
+      <div class="live-score-wrapper">
+        <!-- Score Card 1 -->
+        <div class="score-card">
+          <div class="score-header">
+            <p>5th T20I • England tour of India, 2025</p>
+            <a href="#">T20i</a>
+          </div>
+          <div class="score-body">
+            <table>
+              <tr>
+                <td>
+                  <img src="../images/india.png" alt="India" />
+                  <span>IND</span>
+                </td>
+                <td>
+                  <b class="bold">247-9 (20)</b>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="../images/eng.png" alt="England" />
+                  <span class="eng">ENG</span>
+                </td>
+                <td>
+                  <b>97 (10.3)</b>
+                </td>
+              </tr>
+            </table>
+            <p>India won by 150 runs</p>
+          </div>
+          <div class="score-footer">
+            <a href="pointtable.html">Table</a>
+            <a href="schedule.html">Schedule</a>
+          </div>
+        </div>
+
+        <!-- Score Card 2 -->
+        <div class="score-card">
+          <div class="score-header">
+            <p>30th Match • SA20, 2025</p>
+            <a href="#">T20i</a>
+          </div>
+          <div class="score-body">
+            <table>
+              <tr>
+                <td>
+                  <img src="../images/mi.png" alt="MICT" />
+                  <span>MICT</span>
+                </td>
+                <td>
+                  <b class="bold">201-5 (20)</b>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="../images/dc.jpg" alt="PC" />
+                  <span class="eng">DC</span>
+                </td>
+                <td>
+                  <b>104 (14)</b>
+                </td>
+              </tr>
+            </table>
+            <p>MI Cape Town won by 95 runs</p>
+          </div>
+          <div class="score-footer">
+            <a href="pointtable.html">Table</a>
+            <a href="schedule.html">Schedule </a>
+          </div>
+        </div>
+
+        <!-- Score Card 3 -->
+        <div class="score-card">
+          <div class="score-header">
+            <p>10th Match • IPL, 2025</p>
+            <a href="#">T20i</a>
+          </div>
+          <div class="score-body">
+            <table>
+              <tr>
+                <td>
+                  <img src="../images/rcb.jpg" alt="RCB" />
+                  <span>RCB</span>
+                </td>
+                <td>
+                  <b class="bold">180-6 (20)</b>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="../images/mi.png" alt="MI" />
+                  <span class="eng">MI</span>
+                </td>
+                <td>
+                  <b>150-8 (20)</b>
+                </td>
+              </tr>
+            </table>
+            <p>RCB won by 30 runs</p>
+          </div>
+          <div class="score-footer">
+            <a href="pointtable.html">Table</a>
+            <a href="schedule.html">Schedule</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="latest-news">
+      <h2>Latest Cricket News</h2>
+      <div id="cricketNews"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <p>&copy; 2025 Tri-Cric. All rights reserved.</p>
+        <div class="social-media-links">
+          <a href="https://www.facebook.com" class="facebook-btn">
+            <img
+              src="../images/facebook (3).png"
+              alt="Facebook"
+              class="facebook-img"
+            />
+          </a>
+          <a href="https://www.instagram.com" class="facebook-btn">
+            <img
+              src="../images/instagram.png"
+              alt="instagram"
+              class="instagram"
+            />
+          </a>
+          <a href="https://www.twitter.com" class="facebook-btn">
+            <img
+              src="../images/twitter.png"
+              alt="Twitter"
+              class="twitter-img"
+            />
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../javascript/search.js"></script>
+  </body>
+</html>

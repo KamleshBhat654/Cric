@@ -1,0 +1,301 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #eaf6f5;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Section */
+.head {
+  background: gold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 12px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: all 0.3s ease;
+}
+
+.content {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  width: 90px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.menu ul li {
+  position: relative;
+}
+.menu ul li a {
+  text-decoration: none;
+  color: darkblue;
+  font-weight: 600;
+  font-size: 16px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Underline animation */
+.menu ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: darkblue;
+  transition: width 0.3s ease;
+}
+
+.menu ul li a:hover {
+  color: white;
+}
+
+.menu ul li a:hover::after {
+  width: 100%;
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropdown ul {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 250px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  padding: 12px;
+  color: black;
+  margin: 0;
+  border-radius: 8px;
+}
+
+.dropdown ul h4 {
+  margin: 10px 0 5px;
+}
+
+.dropdown ul a {
+  color: black;
+  padding: 6px 12px;
+  text-decoration: none;
+  display: block;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown ul a:hover {
+  background-color: gold;
+  border-radius: 4px;
+}
+
+.dropdown:hover ul {
+  display: block;
+}
+/* Main Content Section */
+.main-content {
+  padding: 20px;
+  background-color: white;
+  margin-top: 20px;
+  border-radius: 8px;
+}
+
+.format-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.format-btn {
+  background-color: #0a0a3a;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-right: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.format-btn:hover {
+  background-color: #0a0a3a;
+}
+
+/* Points Table Section */
+.points-table-section {
+  text-align: center;
+}
+
+.points-table-wrapper {
+  overflow-x: auto;
+  margin-top: 30px;
+}
+
+.points-table {
+  min-width: 600px; /* Ensures horizontal scroll on small screens */
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.points-table th,
+.points-table td {
+  padding: 12px 15px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.points-table th {
+  background-color: #0a0a3a;
+  color: white;
+  font-size: 18px;
+}
+
+.points-table td {
+  font-size: 16px;
+}
+
+.points-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.points-table tr:hover {
+  background-color: gold;
+}
+
+.points-table td[data-label]:before {
+  content: attr(data-label);
+  font-weight: bold;
+  text-align: left;
+  display: inline-block;
+  width: 100px;
+}
+
+/* Footer Section */
+footer {
+  background-color: #0a0a3a;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: 40px;
+}
+
+footer ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+footer ul li {
+  margin-right: 20px;
+}
+
+footer ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+footer ul li a:hover {
+  text-decoration: underline;
+}
+
+footer .social-media-links a {
+  margin: 0 10px;
+  display: inline-block;
+}
+
+footer .social-media-links img {
+  width: 30px;
+  height: 30px;
+}
+@media screen and (max-width: 768px) {
+  .format-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .format-btn {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .head .content {
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    width: 100%;
+  }
+
+  .logo {
+    order: -1;
+    margin-left: 20px;
+  }
+
+  .menu ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+  }
+
+  .menu ul li {
+    margin: 5px 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .menu ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .menu ul li {
+    margin: 5px 10px;
+  }
+}
+.team-logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
